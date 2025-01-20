@@ -1,0 +1,188 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .navbar {
+    border-bottom: 2px solid #f8f9fa;
+  }
+  
+  .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .featured-section {
+    background-color: #f8f9fa;
+  }
+  
+  footer {
+    background: #343a40;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  .blog-header {
+    border-bottom: 1px solid #e5e5e5;
+  }
+  
+  .blog-header-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+  }
+  
+  .blog-header-logo:hover {
+    text-decoration: none;
+  }
+  
+  .nav a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555;
+    transition: color 0.3s;
+  }
+  
+  .nav a:hover {
+    color: #007bff;
+  }
+  
+  .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .blog-post {
+    margin-bottom: 40px;
+  }
+  
+  .blog-post-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .blog-post-meta {
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
+  .blog-post img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+  
+  .blog-post .content {
+    font-size: 1.1rem;
+    color: #333;
+  }
+  
+  .blog-post a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .blog-post a:hover {
+    text-decoration: underline;
+  }
+  
+  .blog-pagination {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .blog-pagination .btn {
+    width: 45%;
+  }
+  
+  .blog-pagination .btn-outline-primary {
+    border-color: #007bff;
+    color: #007bff;
+  }
+  
+  .blog-pagination .btn-outline-primary:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .blog-pagination .btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+  }
+  
+  .blog-pagination .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  /* Sidebar Styling */
+  .sidebar {
+    background-color: #f8f9fa;
+  }
+  
+  .sidebar h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .sidebar .list-unstyled li a {
+    font-size: 1rem;
+    color: #007bff;
+  }
+  
+  .sidebar .list-unstyled li a:hover {
+    text-decoration: underline;
+  }
+  
+  .sidebar .p-4 {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .blog-header-logo,
+    .blog-post-title {
+      font-size: 1.5rem;
+    }
+  
+    .blog-post .content {
+      font-size: 1rem;
+    }
+  
+    .sidebar {
+      display: none; /* Hides the sidebar on smaller screens */
+    }
+  
+    .blog-post img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .blog-post-title, .blog-header-logo {
+      font-size: 1.25rem;
+    }
+  
+    .blog-post-meta {
+      font-size: 0.8rem;
+    }
+  }
+  
