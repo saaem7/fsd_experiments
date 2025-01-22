@@ -39,18 +39,20 @@
   <section id="contact" class="py-5">
     <div class="container">
       <h2 class="text-center mb-4">Contact Us</h2>
-      <form>
+      <form id="contactForm" novalidate>
         <div class="row">
           <div class="col-md-6">
             <div class="form-group">
               <label for="name">Full Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Your Full Name">
+              <input type="text" class="form-control" id="name" placeholder="Your Full Name" required>
+              <div class="invalid-feedback">Please enter your full name.</div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" class="form-control" id="email" placeholder="Your Email Address">
+              <input type="email" class="form-control" id="email" placeholder="Your Email Address" required>
+              <div class="invalid-feedback">Please enter a valid email address.</div>
             </div>
           </div>
         </div>
@@ -59,31 +61,36 @@
           <div class="col-md-6">
             <div class="form-group">
               <label for="phone">Phone Number</label>
-              <input type="text" class="form-control" id="phone" placeholder="Your Phone Number">
+              <input type="text" class="form-control" id="phone" placeholder="Your Phone Number" pattern="^\d{10}$" required>
+              <div class="invalid-feedback">Please enter a valid 10-digit phone number.</div>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label for="subject">Subject</label>
-              <input type="text" class="form-control" id="subject" placeholder="Subject of Inquiry">
+              <input type="text" class="form-control" id="subject" placeholder="Subject of Inquiry" required>
+              <div class="invalid-feedback">Please enter a subject.</div>
             </div>
           </div>
         </div>
 
         <div class="form-group">
           <label for="reason">Reason for Contacting</label>
-          <select class="form-control" id="reason">
-            <option>General Inquiry</option>
-            <option>Advertising/Partnership</option>
-            <option>Feedback</option>
-            <option>Technical Issue</option>
-            <option>Other</option>
+          <select class="form-control" id="reason" required>
+            <option value="">Select a reason</option>
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Advertising/Partnership">Advertising/Partnership</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Technical Issue">Technical Issue</option>
+            <option value="Other">Other</option>
           </select>
+          <div class="invalid-feedback">Please select a reason for contacting us.</div>
         </div>
 
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea class="form-control" id="message" rows="5" placeholder="Your Message"></textarea>
+          <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+          <div class="invalid-feedback">Please enter your message.</div>
         </div>
 
         <button type="submit" class="btn btn-primary btn-block">Send Message</button>
@@ -97,6 +104,24 @@
       <p class="mb-0">© 2025 Sportify. All Rights Reserved. By Saaem Shaikh</p>
     </div>
   </footer>
+
+  <script>
+    // Form Validation Logic
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function (event) {
+      // Prevent form submission
+      event.preventDefault();
+
+      // Check form validity
+      if (form.checkValidity()) {
+        alert('Form submitted successfully!');
+        form.reset(); // Reset the form after submission
+      } else {
+        form.classList.add('was-validated'); // Apply Bootstrap validation styles
+      }
+    });
+  </script>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
